@@ -7,7 +7,13 @@ public class Main {
     }
 
     public static void main(String[]args) {
-        String str = null ;
-        printLength(str);
+        try {
+            String str = null ;
+            printLength(str); 
+        }
+        catch(NullPointerException ex) {
+            System.out.println("エラー：nullだよ" ) ;
+            System.out.println(ex.getMessage()) ;
+        }
     }
 }
